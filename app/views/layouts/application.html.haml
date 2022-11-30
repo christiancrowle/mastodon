@@ -46,6 +46,7 @@
     = stylesheet_link_tag custom_css_path, skip_pipeline: true, host: root_url, media: 'all'
 
   %body{ class: body_classes }
+    %p= @message
     = content_for?(:content) ? yield(:content) : yield
 
     .logo-resources{ 'tabindex' => '-1', 'inert' => true, 'aria-hidden' => true }
